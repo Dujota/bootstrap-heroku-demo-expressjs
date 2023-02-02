@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+  <h1>All blog posts</h1>
+
+  <div class="row">
+    <% posts.forEach(function(post) { %>
+      <div class="col-sm-6 col-lg-4 col-xl-3 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= post.title%>
+            </h5>
+            <p class="card-text">
+              <%= post.content %>
+            </p>
+            <a href="<%= post._id%>" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+  <%- include('../partials/footer') %>

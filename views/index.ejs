@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('partials/header') %>
+  <form action="/posts" method="POST">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input name="title" required type="text" class="form-control" id="exampleFormControlInput1"
+        placeholder="Title of Post">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Write a blog</label>
+      <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"
+        placeholder="Tell me about your blog post" required></textarea>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+  <%- include('partials/footer') %>
