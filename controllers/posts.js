@@ -20,4 +20,10 @@ function create(req, res) {
   });
 }
 
-module.exports = { index, create };
+function show(req, res) {
+  Post.findById(req.params.id, (err, post) => {
+    res.render('posts/show', { post });
+  });
+}
+
+module.exports = { index, create, show };

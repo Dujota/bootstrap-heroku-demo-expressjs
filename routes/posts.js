@@ -5,7 +5,7 @@ const postsCtrl = require('../controllers/posts');
 
 router.get('/', postsCtrl.index);
 router.post('/', postsCtrl.create);
+router.get('/:id', postsCtrl.show);
 // router.get('/new', moviesCtrl.new);
-// router.get('/:id', moviesCtrl.show);
 
 module.exports = router;
